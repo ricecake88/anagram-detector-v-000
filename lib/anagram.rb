@@ -16,5 +16,7 @@ class Anagram
       end
     end
     anagrams
+    
+    @word.split()
   end
 end
