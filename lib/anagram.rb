@@ -8,7 +8,7 @@ class Anagram
   end
   
   def match(possible_anagrams) #returns all matches in array
-    anagrams = []
+   ''' anagrams = []
     characters_to_match = @word.chars.sort(&:casecmp).join
     possible_anagrams.each_with_index do |possible, i|
       if possible.chars.sort(&:casecmp).join == characters_to_match
@@ -16,9 +16,9 @@ class Anagram
       end
     end
     anagrams
-    
-    possible_anagrams.each do |possible|
-      if @word.split("").sort == possible.split("").sort
-        anagrams << possible
+    '''
+    possible_anagrams.select do |possible|
+      @word.split("").sort == possible.split("").sort
+    end
   end
 end
