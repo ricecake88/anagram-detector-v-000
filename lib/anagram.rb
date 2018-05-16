@@ -17,6 +17,8 @@ class Anagram
     end
     anagrams
     
-    @word.split()
+    possible_anagrams.each do |possible|
+      if @word.split("").sort == possible.split("").sort
+        anagrams << possible
   end
 end
